@@ -1,0 +1,70 @@
+<html>
+<head>
+
+<link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css' /> 
+<link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' /> 
+<link rel="stylesheet" href="/stylesheets/product_display.css" type="text/css" >
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header" class="col-md-6">
+     <a class="navbar-brand" href="/"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/318px-EBay_logo.svg.png" height="30" width="30"></a>  
+  </div>
+    <div class="col-md-6">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search" id="search">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">Search<i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+ <ul>	
+ <li><a href="/signout"><i class="fa fa-edit"></i>Sign Out</a></li>
+ </ul>
+   <ul>
+        <li><a href="/sell"><i class="fa fa-edit"></i>Sell Product</a></li>
+    </ul>
+</nav>
+
+    <div class="stepwizard">
+    <div class="stepwizard-row">
+    </div>
+</div>
+                  <% for(var j=0; j<rows.length; j++) { %>
+<div class="container-fluid">
+    <div class="content-wrapper">	
+		<div class="item-container">	
+			<div class="container">	
+	
+		<div class="container-fluid">		
+			<div class="col-md-12 product-info">
+					<ul id="myTab" class="nav nav-tabs nav_tabs">
+						
+						<li class="active"><a href="#service-one" data-toggle="tab">User Details</a></li>
+						
+					</ul>
+				<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active" id="service-one">
+						 
+							<section class="container product-info">
+								<h3> First Name: <%= rows[j].firstName %></h3>
+								<li>Last Name:<%= rows[j].lastName %></li>
+								<li>Email Id: <%= rows[j].email %></li>
+								<li>SSN:  <%= rows[j].ssn %></li>
+							</section>
+										  
+						</div>
+					
+				</div>
+				</hr>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<% } %>
+</body>
+</html>

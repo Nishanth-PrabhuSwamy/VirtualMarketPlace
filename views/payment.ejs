@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/style1.css" type="text/css" >
+<link rel="stylesheet" href="/stylesheets/process_steps.css" type="text/css" >
+<style> {
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header" class="col-md-6">
+     <a class="navbar-brand" href="/"><img src="./images/ebay.jpg" height="90" width="90"></a>  
+  </div>
+
+<div class="container">
+
+                    <h2>Check Out</h2>
+                </div>
+                </span>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th class="text-left">Price</th>
+                            <th class="text-left">Quantity</th>
+                            <th class="text-left">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        
+                        
+                        <% for(var i=0;i
+				<productName.length;i++)
+{%>
+<tr>
+<td >
+					<%=productName[i]%></td>
+				<td><%=price[i]%></td>
+				<td ><%=quantity[i]%></td>
+				<td ><%=total[i]%></td>
+				</tr>
+				<%} %>
+	
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right"><h4><strong>Total:</strong></h4></td>
+                            <td class="text-left text-danger"><h4><strong><%=finalValue%></strong></h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form action="/toPay" method="post">
+                <button type="submit" class="btn btn-success ">
+                    Pay Now<span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+                </form></td>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

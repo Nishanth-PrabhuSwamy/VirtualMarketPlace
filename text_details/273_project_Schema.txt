@@ -1,0 +1,79 @@
+1. Table -- userDetails
+firstName
+lastName
+email
+password
+address
+zipCode
+city
+state
+accountDetails
+ssn(pk)
+
+2. Table -- forgotPasswrod
+ssn(pk)
+securityQuestion
+answer
+
+3. Table-- Buyer
+buyerId(fk)
+productId
+categoryId
+
+4. Table-- Seller
+sellerId(fk)
+productId
+categoryId
+
+5. Table -- product
+productId(pk)
+productType
+categoryId
+quantity
+condition
+brand
+imageName
+
+6. Table -- Category
+categoryId(pk)
+categoryName
+categoryDesc
+
+7. Table-- Payment
+paymentId(pk)
+paymentMode
+buyerId
+sellerId
+paymentAmount
+
+8. Table-- Auction
+sellerId(fk)
+basePrice
+productId
+categoryId
+interval
+buyerId
+endTime
+validity
+currentPrice
+currentBuyer
+
+9. Table-- Selling
+sellerId(fk)
+quantity
+price
+productId
+categoryId
+validity
+buyerId
+
+10. Table- ProductFeatures
+productId(fk)
+brand
+model
+desciprition
+
+11. Table- review
+userId
+rating
+description
